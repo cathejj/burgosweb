@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale="1.0">
+  <title></title>
+      <link rel="stylesheet" href="regstyle.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+    <script>
+
+  var script_url= "https://script.google.com/macros/s/AKfycbz8-Qbn-JIy6eSRF01xIncJrF9hBzAECGm_0t-AywM3NvCBZJvRfBaRPQ6SazWKqulF/exec";
+
+  function insert_value() 
+  {
+      var id1=$("#id").val();    
+      var name=$("#name").val();
+      var addr=$("#addr").val();
+      var phone=$("#phone").val();
+      var issue=$("#issue").val();
+      
+      
+      
+      var url=script_url+"?callback=ctrlq&name="+name+"&id="+id1+"&addr="+addr+"&phone="+phone+"&issue="+issue+"&action=insert";
+      var request = jQuery.ajax({
+      crossDomain: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+    });
+  }
+
+</script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="title">
+     Complain
+    </div>
+    <div class="form">
+       
+       <div class="inputfield">
+          <label>Complainee: </label>
+          <input type="text" class="input" name="name" id="name">
+       </div>  
+        <div class="inputfield">
+          <label>Address: </label>
+          <input type="text" class="input" name="addr" id="addr">
+       </div>
+       <div class="inputfield">
+          <label>Phone Number: </label>
+          <input type="text" class="input" name="phone" id="phone">
+       </div>  
+       <div class="inputfield">
+          <label>Issue: </label>
+          <input type="text" class="input" name="issue" id="issue">
+       </div>    
+      <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <p>Agreed to terms and conditions</p>
+       </div> 
+      <div class="inputfield">
+<input type="button" value="submit" class="btn" onclick="insert_value()">
+      </div>
+    </div>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>

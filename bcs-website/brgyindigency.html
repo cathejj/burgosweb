@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale="1.0">
+  <title></title>
+      <link rel="stylesheet" href="regstyle.css">
+
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+    <script>
+
+  var script_url= "https://script.google.com/macros/s/AKfycbyOGeH5F-ih5aumIB7S0Su1nvuT2QBfMeLrbqR2135ql6BokqFSBixxiiuDSr6lS0YCNQ/exec";
+
+  function insert_value() 
+  {
+      var id1=$("#id").val();    
+      var name=$("#name").val();
+      var addr=$("#addr").val();
+      var gender=$("#gender").val();
+      var purpose=$("#purpose").val();
+      var phone=$("#phone").val();
+      
+      var url=script_url+"?callback=ctrlq&name="+name+"&id="+id1+"&addr="+addr+"&gender="+gender+"&purpose="+purpose+"&phone="+phone+"&action=insert";
+      var request = jQuery.ajax({
+      crossDomain: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+    });
+  }
+
+</script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="title">
+      Brgy. Indigency Form
+    </div>
+    <div class="form">
+       <div class="inputfield">
+          <label>Resident's Name: </label>
+          <input type="text" class="input" name="name" id="name">
+       </div>  
+        <div class="inputfield">
+          <label>Address: </label>
+          <input type="text" class="input" name="addr" id="addr">
+       </div>  
+       <div class="inputfield">
+          <label>Gender (F/M)</label>
+          <input type="text" class= "input" name="gender" id="gender">
+       </div> 
+
+
+        <div class="inputfield">
+          <label>Purpose: </label>
+          <input type="text" class="input" name="purpose" id="purpose">
+       </div> 
+      <div class="inputfield">
+          <label>Phone Number:</label>
+          <input type="number" class="input" name="phone" id="phone">
+       </div> 
+      <div class="inputfield terms">
+          <label class="check">
+            <input type="checkbox">
+            <span class="checkmark"></span>
+          </label>
+          <p>Agreed to terms and conditions</p>
+       </div> 
+      <div class="inputfield">
+
+        <input type="button" value="submit" class="btn" onclick="insert_value()">
+      </div>
+    </div>
+</div>
+<script src="script.js"></script>
+
+</body>
+</html>

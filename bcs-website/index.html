@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale="1.0">
+    <title>bcs</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+
+    <script>
+
+  var script_url="https://script.google.com/macros/s/AKfycbzP42K_IDXg7Q8GKHjgcKMdkohAcpPNqeGvmiNPZXDaBZDc-gXxnSWeZIJFg59haMzY/exec";
+
+  function insert_value() 
+  {
+
+    var id1=$("#id").val();
+      var name=$("#name").val();
+      var email=$("#email").val();
+      var phone=$("#phone").val();
+      var message=$("#message").val();
+      
+      var url=script_url+"?callback=ctrlq&name="+name+"&id="+id1+"&email="+email+"&con_num="+con_num+"&message="+message+"&action=insert";
+      var request = jQuery.ajax({
+      crossDomain: true,
+      url: url ,
+      method: "GET",
+      dataType: "jsonp"
+    });
+  }
+
+</script>
+
+
+</head>
+<body>
+    
+<!-- header section starts  -->
+<header>
+
+    
+<div class="header-2">
+
+        <a href="#" class="logo"> <i class="fas fa-seedling"></i> Burgos. </a>
+
+        
+
+    </div>
+
+    <div class="header-3">
+
+        <div id="menu-bar" class="fas fa-bars"></div>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#services">services</a>
+            <a href="#activities">activities</a>
+            <a href="#about">about</a>
+            <a href="#contact">contact</a>
+        </nav>
+
+
+    </div>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="swiper-container home-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+                <div class="box" style="background: url(images/slider1.jpg);">
+                    <div class="content">
+                        <span></span>
+                        <h3><i>"Higit sa lahat, ang tao"</i></h3>
+                        <a href="#contact" class="btn">view</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box" style="background: url(images/slider3.jpg);">
+                    <div class="content">
+                        <span></span>
+                        <h3>Welcome Burgosian!</h3>
+                        <a href="#activities" class="btn">view</a>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="box" style="background: url(images/slider2.jpg);">
+                    <div class="content">
+                        <span>basta taga Burgos, </span>
+                        <h3>serbisyo ay maayos.</h3>
+                        <a href="#about" class="btn">view</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- banner section starts  -->
+
+<!-- banner section ends -->
+
+<!-- services section starts  -->
+
+<section class="services" id="services">
+
+<h1 class="heading"> Request your certificate </h1>
+
+<div class="box-container">
+
+    <div class="box">
+        <img src="images/clearance.jpg" alt="">
+        <div class="content">
+            <h3>Brgy. Clearance</h3>
+            <a href="https://drive.google.com/file/d/1VlFyV-s3SdiZRIKUs6o4ACYqC9-KLFed/view?usp=share_link" class="btn">download the apk</a>
+        </div>
+    </div>
+    <div class="box">
+        <img src="images/indigency.jpg" alt="">
+        <div class="content">
+            <h3>Brgy. Indigency</h3>
+            <a href="https://drive.google.com/file/d/1VlFyV-s3SdiZRIKUs6o4ACYqC9-KLFed/view?usp=share_link" class="btn">download the apk</a>
+        </div>
+    </div>
+    <div class="box">
+        <img src="images/permit.jpg" alt="">
+        <div class="content">
+            <h3>Brgy. Permit</h3>
+            <a href="https://drive.google.com/file/d/1VlFyV-s3SdiZRIKUs6o4ACYqC9-KLFed/view?usp=share_link" class="btn">download the apk</a>
+        </div>
+    </div>
+    <div class="box">
+        <img src="images/complaint.jpg" alt="">
+        <div class="content">
+            <h3>Send Complain</h3>
+            <a href="https://drive.google.com/file/d/1VlFyV-s3SdiZRIKUs6o4ACYqC9-KLFed/view?usp=share_link" class="btn">download the apk</a>
+        </div>
+    </div>
+
+</div>
+
+</section>
+
+<!-- services section ends -->
+
+<!-- product section starts  -->
+
+<section class="activities" id="activities">
+
+<h1 class="heading"> Activities </h1>
+
+<div class="box-container">
+
+
+<div class="box">
+        <img src="images/act- 6.jpg" alt="">
+        <h3>DEPED </h3>
+
+        <div class="price"><span></span></div>
+        <a href="https://m.facebook.com/story.php?story_fbid=pfbid0Sui19VhsX35CMT79ChkkXmbguuQcEjj97rkVGRBhxT5XeYF1nnzqP8MKXwg46MtPl&id=100086436435632&mibextid=Nif5oz" class="btn">view</a>
+    </div>
+
+    <div class="box">
+        <img src="images/act- 5.jpg" alt="">
+        <h3>SGLG</h3>
+
+        <div class="price"><span></span></div>
+        <a href="https://m.facebook.com/story.php?story_fbid=pfbid02v2Ytq6VtTzcKRXxdheMDjRe1cMm7ioFrEanTbqvqLifrg1wWKCXK5U83vsLXuKnZl&id=100086436435632&mibextid=Nif5oz" class="btn">view</a>
+
+    </div>
+
+    <div class="box">
+        <img src="images/act- 4.jpg" alt="">
+        <h3>Panunumpa sa katungkulan</h3>
+
+        <div class="price"><span></span></div>
+        <a href="https://m.facebook.com/story.php?story_fbid=pfbid0FsJLP3wTZNVJFtCcFzHXBUgF1LpF9JbfD2YYgKfvKweCpmm4epvpVQJttwN3HE5cl&id=100086436435632&mibextid=Nif5oz" class="btn">view</a>
+    </div>
+    <div class="box">
+           
+        <img src="images/act- 3.jpg" alt="">
+        <h3> Year end conference 2022</h3>
+        <div class="price"> <span></span></div>
+        <a href="https://m.facebook.com/story.php?story_fbid=pfbid0Z5MmeeYxRQnHJAwomyvC3EdnGi24xFvY8QbeQcha8SYhRRBntwqL7cgrubMwoX2vl&id=100086436435632&mibextid=Nif5oz" class="btn">view</a>
+    </div>
+
+    <div class="box">
+        
+        <img src="images/act- 2.jpg" alt="">
+        <h3>mga batang Skawts</h3>
+        <div class="price"><span></span></div>
+        <a href="https://www.facebook.com/photo/?fbid=130365706521310&set=pcb.130365806521300" class="btn">view</a>
+    </div>
+
+    <div class="box">
+        <img src="images/act-1.jpg" alt="">
+        <h3>Kasalang Barangay 2022</h3>
+        <div class="price"><span></span></div>
+        <a href="https://www.facebook.com/photo/?fbid=885176272600362&set=a.236295497488446" class="btn">view</a>
+    </div>
+
+    
+</div>
+
+</section>
+
+
+
+<!-- .icons section ends -->
+
+<!-- deal section starts  -->
+
+<section class="about" id="about">
+
+    <h1 class="heading"> Burgosian </h1>
+
+    <div class="row">
+
+        <div class="content">
+            <h3 class="title">24 oras handang tumulong</h3>
+            <p>Maaring magsubmit ng inyong mensahe.</p>
+            <a href="#contact" class="btn">click here</a>
+        </div>
+
+        <div class="image">
+            <img src="images/deal-img.jpg" alt="">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- deal section ends -->
+
+<!-- contact section starts  -->
+
+<section class="contact" id="contact">
+
+<h1 class="heading">get in touch</h1>
+
+<div class="row">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3858.8934866127174!2d121.13845591415351!3d14.718613478121245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397bb0ef3d37799%3A0x60cf7c24622fb2f7!2sBurgos%20Barangay%20Hall!5e0!3m2!1sen!2sph!4v1678163351615!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+    <form action="">
+
+        <div class="inputBox">
+            <input type="text" name="name" id="name">
+            <label>name</label>
+        </div>
+        <div class="inputBox">
+            <input type="email" name="email" id="email">
+            <label>email</label>
+        </div>
+        <div class="inputBox">
+            <input type="number" name="con_num" id="con_num">
+            <label>number</label>
+        </div>
+        <div class="inputBox">
+            <textarea name="name" name="message" id="message" cols="30" rows="10"></textarea>
+            <label>message</label>
+        </div>
+
+        
+<input type="button" value="submit" class="btn" onclick="insert_value()">
+    </form>
+
+</div>
+
+</section>
+
+
+<!-- contact section ends -->
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>about us</h3>
+            <p>Barangay Burgos Hall Manga St. Doña Pepeng Subdivision Burgos Montalban Rizal, 1860</p>
+            <p>Contact No. : 0950 169 5200</p>
+        </div>
+       
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#home">home</a>
+            <a href="#services">services</a>
+            <a href="#activities">activities</a>
+            <a href="#about">about</a>
+            <a href="#contact">contact</a>
+        </div>
+        <div class="box">
+            <h3>follow us</h3>
+            <a href="https://www.facebook.com/barangayburgosofficialpage">facebook</a>
+            
+        </div>
+
+    </div>
+
+    <h1 class="credit"> <span> bcs. </span></h1>
+    
+</section>
+
+<!-- footer section ends -->
+
+<!-- scroll top button  -->
+<a href="#home" class="scroll-top fas fa-angle-up"></a>
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="script.js"></script>
+
+</body>
+</html>
